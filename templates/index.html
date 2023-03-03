@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+
+  
+
+
+</head>
+
+<body>
+    <form action="/predict" method="post" >
+        <div class="heading" >
+            <a href="index.html" ><h1> </h1></a>
+            
+        </div>
+
+        <div class="contains">
+            <!-- 1 -->
+            <label for="age">1. Age: </label>
+            <input type="number" id="age" step=".1" name="age" value="0.0">
+            <br><br>
+
+            <!-- 2 -->
+            <label for="sex">2. Sex: </label>
+            <select name="sex" id="sex" value="0.0">
+                <option value="1.0">Male</option>
+                <option value="0.0">Female</option>
+            </select>
+            <br><br>
+
+            <!-- 3 -->
+            <label for="cp">3. Chest Pain: </label>
+            <select name="cp" id="cp" value="0.0">
+                <option value="1.0">Typical Angina</option>
+                <option value="2.0">Atypical Angina</option>
+                <option value="3.0">Non-anginal Pain</option>
+                <option value="4.0">Asymptomatic</option>
+            </select>
+            <br><br>
+
+            <!-- 4 -->
+            <label for="trestbps">4. Resting blood pressure (mm Hg): </label>
+            <input type="number" id="trestbps" step=".1" name="trestbps" value="0.0">
+            <br><br>
+
+            <!-- 5 -->
+            <label for="chol">5. Cholestoral (mg/dl): </label>
+            <input type="number" id="chol" step=".1" name="chol" value="0.0">
+            <br><br>
+
+            <!-- 6 -->
+            <label for="fbs">6. Is fasting blood sugar > 120 mg/dl: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label for="fbs" class="trueFalse">Yes</label>
+            <input type="radio" id="fbs" name="fbs" value="1.0">
+            <label for="fbs" class="trueFalse">No</label>
+            <input type="radio" id="fbs" name="fbs" value="0.0">
+            <br><br>
+
+            <!-- 7 -->
+            <label for="restecg">7. Resting Electrocardiographic results: </label>
+            <select name="restecg" id="restecg" style="width: 100px;" value="0.0">
+                <option value="0.0">Normal</option>
+                <option value="1.0">Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of
+                    > 0.05 mV)</option>
+                <option value="2.0">Showing probable or definite left ventricular hypertrophy by Estes' criteria
+                </option>
+            </select>
+            <br><br>
+
+            <!-- 8 -->
+            <label for="thalach">8. Maximum heart rate achieved: </label>
+            <input type="number" id="thalach" step=".1" name="thalach" value="0.0">
+            <br><br>
+
+            <!-- 9 -->
+            <label for="exang">9. Exercise induced angina: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label for="exang" class="trueFalse">Yes</label>
+            <input type="radio" id="exang" name="exang" value="1.0">
+            <label for="exang" class="trueFalse">No</label>
+            <input type="radio" id="exang" name="exang" value="0.0">
+            <br><br>
+
+            <!-- 10 -->
+            <label for="oldpeak">10. ST depression induced by exercise relative to rest: </label>
+            <input type="number" id="oldpeak" step=".1" name="oldpeak" value="0.0">
+            <br><br>
+
+            <!-- 11 -->
+            <label for="slope">11. The slope of the peak exercise ST segment: </label>
+            <select name="slope" id="slope" value="0.0">
+                <option value="0.0">Upsloping</option>
+                <option value="1.0">Flat</option>
+                <option value="2.0">Downsloping</option>
+            </select>
+            <br><br>
+
+            <!-- 12 -->
+            <label for="ca">12. Number of major vessels (0-3) colored by flourosopy: </label>
+            <select name="ca" id="ca" value="0.0">
+                <option value="0.0">0</option>
+                <option value="1.0">1</option>
+                <option value="2.0">2</option>
+                <option value="3.0">3</option>
+            </select>
+            <br><br>
+
+            <!-- 13 -->
+            <label for="thal">13. Thal: </label>
+            <select name="thal" id="thal" value="0.0">
+                <option value="1.0">Normal</option>
+                <option value="2.0">Fixed Defect</option>
+                <option value="3.0">Reversable Defect</option>
+            </select>
+            <br><br>
+        </div>
+
+        <!-- 14 -->
+        <input type="submit" class="submit">
+
+        <br><br>
+
+    </form>
+    <br>
+
+    <!-- Prediction Result -->
+    <p style="background-color: red; color: white;">{{prediction_text_yes}}</p>
+    
+    <p style="background-color: green; color: white;">{{prediction_text_no}}</p>
+    
+    
+</body>
+
+</html>
+
+<!-- 
+['age',
+'sex',
+'cp',
+'trestbps',
+'chol',
+'fbs',
+'restecg',
+'thalach',
+'exang',
+'oldpeak',
+'slope',
+'ca',
+'thal',
+'class'] -->

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+    background: linear-gradient(to bottom right, #FFD4B2, #FFF6BD, #CEEDC7, #86C8BC);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.heading {
+    cursor: pointer;
+    width: 776px;
+    height: 70px;
+    background-color: rgba(220, 0, 0, .5);
+    color: #393E46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+    text-shadow: 0px 3px 3px black;
+
+}
+
+.heading h1 {
+    margin: 0;
+}
+
+.heading a{
+    text-decoration: none;
+    color: #DFDFDE;
+}
+
+
+.heading:hover {
+    background-color: #F24C4C;
+}
+
+.contains {
+    margin: 30px 50px 25px 50px;
+}
+
+form {
+
+    margin: 0;
+    background-color: rgba(220, 0, 0, .2);
+    box-shadow: 0px 0px 100px grey;
+
+}
+
+
+label {
+    /* font-weight: bold; */
+    cursor: pointer;
+    color: #1B262C;
+    margin-right: 10px;
+    font-size: 22px;
+    text-shadow: 0px 2px 2px black;
+}
+
+
+input {
+    width: 50px;
+    border-radius: 100vw;
+    border: 0;
+    text-align: center;
+    background-color: rgb(255, 226, 226);
+    color: grey;
+    font-size: 16px;
+    accent-color: red;
+    /* box-shadow: 1px 2px 0px grey; */
+
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+
+
+select {
+    cursor: pointer;
+    border-radius: 100vw;
+    border: 0;
+    background-color: rgb(255, 226, 226);
+    color: grey;
+    font-size: 16px;
+    text-align: center;
+    /* box-shadow: 1px 2px 0px grey; */
+}
+
+
+
+.trueFalse {
+    font-weight: normal;
+}
+
+.submit {
+    background-color: rgba(220, 0, 0, .5);
+    cursor: pointer;
+    position: relative;
+    left: 42%;
+    width: 100px;
+    height: 30px;
+    box-shadow: 0px 3px 3px grey;
+    color: #DFDFDE;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px black;
+}
+
+.submit:hover {
+    background-color: #F24C4C;
+}
